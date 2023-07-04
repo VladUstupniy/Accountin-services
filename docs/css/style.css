@@ -499,8 +499,25 @@ a {
 }
 
 .line__link {
+  position: relative;
   font-family: var(--font-family);
   color: var(--text-color);
+}
+.line__link:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: -3px;
+  background-color: var(--accent);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.line__link:hover.line__link:before {
+  width: 100%;
 }
 
 .line__link--small {
