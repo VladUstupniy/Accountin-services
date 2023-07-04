@@ -13,7 +13,7 @@
     margin: 0px 0px 120px 0px;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.13em;
     line-height: 25px;
     text-align: center;
     color: var(--white);
@@ -83,4 +83,17 @@
 }
 .controls__arrow--blue {
     background-color: var(--accent);
+}
+
+
+
+
+
+
+
+
+@keyframes fade {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }

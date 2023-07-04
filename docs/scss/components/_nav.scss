@@ -11,7 +11,7 @@
 .nav__logo {
     font-family: var(--second-family);
     font-weight: 900;
-    font-size: 36px;
+    font-size: 2.3em;
     line-height: 138%;
     color: var(--accent);
 
@@ -49,7 +49,7 @@
 }
 .line__link--small {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 0.85em;
     line-height: 132%;
     color: #000;
     &:not(:last-child){
@@ -73,7 +73,7 @@
 }
 .line__link--big {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.88em;
     letter-spacing: 10%;
     text-transform: uppercase;
     &:not(:last-child){
