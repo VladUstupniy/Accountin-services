@@ -983,6 +983,10 @@ a {
   min-height: 255px;
   max-width: 255px;
   background: var(--light-grey);
+  cursor: pointer;
+  color: var(--black);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 992px) {
   .about__card {
@@ -997,7 +1001,6 @@ a {
   font-size: 55px;
   letter-spacing: 10%;
   text-transform: uppercase;
-  color: var(--black);
 }
 
 .card__text {
@@ -1006,7 +1009,6 @@ a {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  color: var(--black);
 }
 
 .card__link {
@@ -1017,6 +1019,16 @@ a {
   text-decoration: underline;
   color: var(--accent);
   padding: 5px 0px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.about__card:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+.about__card:hover .card__link {
+  color: var(--white);
 }
 
 .none {

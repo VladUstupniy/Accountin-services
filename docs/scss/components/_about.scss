@@ -39,6 +39,9 @@
     min-height: 255px;
     max-width: 255px;
     background: var(--light-grey);
+    cursor: pointer;
+    color: var(--black);
+    transition: all .3s ease-out;
     @media (max-width: 992px) {
         max-width: 100%;
     }
@@ -50,7 +53,6 @@
     font-size: 55px;
     letter-spacing: 10%;
     text-transform: uppercase;
-    color: var(--black);
 }
 .card__text {
     margin: 0px 0px 45px 0px;
@@ -58,7 +60,6 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    color: var(--black);
 }
 .card__link {
     display: block;
@@ -68,4 +69,12 @@
     text-decoration: underline;
     color: var(--accent);
     padding: 5px 0px;
+    transition: all .3s ease-out;
+}
+.about__card:hover {
+    background: var(--accent);
+    color: var(--white);
+    .card__link {
+        color: var(--white);
+    }
 }
