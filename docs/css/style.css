@@ -5,6 +5,9 @@
   --text-color: #222;
   --accent: #005fa3;
   --white: #fff;
+  --grey: #808080;
+  --light-grey: #ebebeb;
+  --black: #000000;
 }
 
 body {
@@ -349,8 +352,19 @@ a {
   margin: 0 auto;
 }
 
+/* Background-image */
 .bg {
-  background: url("../../img/bg.png") center/cover no-repeat, #808080;
+  background: url("../../img/bg.png") center/cover no-repeat, var(--grey);
+}
+
+/* Section */
+.section {
+  padding: 140px 0px;
+}
+@media (max-width: 992px) {
+  .section {
+    padding: 70px 0px;
+  }
 }
 
 /* Button */
@@ -817,27 +831,21 @@ a {
   }
 }
 
-.service {
+.services {
   width: 100%;
-  background: #ebebeb;
-  padding: 140px 0px;
-}
-@media (max-width: 992px) {
-  .service {
-    padding: 70px 0px;
-  }
+  background: var(--light-gray);
 }
 
-.service__subtitle {
+.services__subtitle {
   margin: 0px 0px 100px 0px;
 }
 @media (max-width: 992px) {
-  .service__subtitle {
+  .services__subtitle {
     margin: 0px 0px 50px 0px;
   }
 }
 
-.service__content {
+.services__content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
@@ -845,23 +853,23 @@ a {
   gap: 30px;
 }
 @media (max-width: 992px) {
-  .service__content {
+  .services__content {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .service__content {
+  .services__content {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.service__card {
+.services__card {
   position: relative;
   padding: 45px;
   min-height: 360px;
-  background: url("../../img/about-card.png") center/cover no-repeat, #2F3135;
+  background: url("../../img/about-card.png") center/cover no-repeat, rgba(0, 0, 0, 0.65);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -870,7 +878,7 @@ a {
           align-items: end;
   cursor: pointer;
 }
-.service__card::before {
+.services__card::before {
   position: absolute;
   display: block;
   content: "";
@@ -878,18 +886,18 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: var(--black);
   opacity: 0.65;
   z-index: 1;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
-.service__card:hover.service__card::before {
-  background-color: #005FA3;
+.services__card:hover.services__card::before {
+  background-color: var(--accent);
 }
 
-.service__text {
+.services__text {
   position: relative;
   z-index: 10;
   display: block;
@@ -901,7 +909,7 @@ a {
   color: var(--white);
   margin: 0;
 }
-.service__text span {
+.services__text span {
   display: block;
 }
 

@@ -1,18 +1,14 @@
-.service {
+.services {
     width: 100%;
-    background: #ebebeb;
-    padding: 140px 0px;
-    @media (max-width: 992px) {
-        padding: 70px 0px;
-    }
+    background: var(--light-gray);
 }
-.service__subtitle {
+.services__subtitle {
     margin: 0px 0px 100px 0px;
     @media (max-width: 992px) {
         margin: 0px 0px 50px 0px;
     }
 }
-.service__content {
+.services__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -23,11 +19,11 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
-.service__card {
+.services__card {
     position: relative;
     padding: 45px;
     min-height: 360px;
-    background: url('../../img/about-card.png') center/cover no-repeat,#2F3135;
+    background: url('../../img/about-card.png') center/cover no-repeat, rgba(0, 0, 0, 0.65);
     display: flex;
     align-items: end;
     cursor: pointer;
@@ -39,16 +35,16 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #000000;
+        background-color: var(--black);
         opacity: 0.65;
         z-index: 1;
         transition: all .3s ease-out;
     }
 }
-.service__card:hover.service__card::before {
-    background-color: #005FA3;
+.services__card:hover.services__card::before {
+    background-color: var(--accent);
 }
-.service__text {
+.services__text {
     position: relative;
     z-index: 10;
     display: block;

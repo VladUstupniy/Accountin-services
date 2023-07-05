@@ -1,5 +1,16 @@
+/* Background-image */
 .bg {
-    background: url('../../img/bg.png') center/cover no-repeat, #808080;
+    background: url('../../img/bg.png') center/cover no-repeat, var(--grey);
+}
+
+
+
+/* Section */
+.section {
+    padding: 140px 0px;
+    @media (max-width: 992px) {
+        padding: 70px 0px;
+    }
 }
 
 
