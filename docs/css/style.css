@@ -792,6 +792,11 @@ a {
   text-align: left;
   margin: 0px 0px 40px 0px;
 }
+@media (max-width: 992px) {
+  .title {
+    margin: 0px 0px 20px 0px;
+  }
+}
 
 .subtitle {
   display: block;
@@ -806,15 +811,30 @@ a {
 .subtitle span {
   display: block;
 }
+@media (max-width: 992px) {
+  .subtitle {
+    font-size: 40px;
+  }
+}
 
 .service {
   width: 100%;
   background: #ebebeb;
   padding: 140px 0px;
 }
+@media (max-width: 992px) {
+  .service {
+    padding: 70px 0px;
+  }
+}
 
 .service__subtitle {
   margin: 0px 0px 100px 0px;
+}
+@media (max-width: 992px) {
+  .service__subtitle {
+    margin: 0px 0px 50px 0px;
+  }
 }
 
 .service__content {
@@ -823,6 +843,18 @@ a {
   -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+@media (max-width: 992px) {
+  .service__content {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .service__content {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .service__card {
