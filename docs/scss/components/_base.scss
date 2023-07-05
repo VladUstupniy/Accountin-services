@@ -1,9 +1,6 @@
 .bg {
     background-color: #808080;
-    background-image: url('../../img/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url('../../img/bg.png') center/cover no-repeat;
 }
 .button {
     display: block;
@@ -13,12 +10,10 @@
     margin: 0px 0px 120px 0px;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 1.13em;
+    font-size: 18px;
     line-height: 25px;
     text-align: center;
     color: var(--white);
-    /* width: 270px; */
-    /* height: 60px; */
     background-color: var(--accent);
     transition: all .3s ease-out;
 }

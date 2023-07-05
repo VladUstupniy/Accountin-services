@@ -29,6 +29,9 @@ body {
 
 //-----[---ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ---]---------------------------------------------------------------------------------------------
 @import './components/_normalize.scss';
+* {
+	box-sizing: border-box;
+}
 a {
 	text-decoration: none;
 }
@@ -72,6 +75,7 @@ a {
 @import './components/nav';
 @import './components/header';
 @import './components/titles';
+@import './components/service';
 //-----[--/ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ/--]--------------------------------------------------------------------------
 
 
