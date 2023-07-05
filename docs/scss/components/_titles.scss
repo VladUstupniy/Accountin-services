@@ -23,6 +23,7 @@
     text-align: left;
     span  {
         display: block;
+        color: var(--accent);
     }
     @media (max-width: 992px) {
         font-size: 40px;
