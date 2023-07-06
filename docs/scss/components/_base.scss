@@ -119,6 +119,9 @@
     background-image: url('../../img/arrow-next.svg');
 }
 .controls__arrow--blue {
+    background-color: rgb(0, 95, 163, 0.2);
+}
+.controls__arrow--blue:hover {
     background-color: var(--accent);
 }
 

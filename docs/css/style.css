@@ -503,6 +503,10 @@ a {
 }
 
 .controls__arrow--blue {
+  background-color: rgba(0, 95, 163, 0.2);
+}
+
+.controls__arrow--blue:hover {
   background-color: var(--accent);
 }
 
@@ -1029,6 +1033,38 @@ a {
 }
 .about__card:hover .card__link {
   color: var(--white);
+}
+
+.clients {
+  background-color: var(--light-grey);
+}
+
+.clients__slider {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0px 0px 100px 0px;
+}
+@media (max-width: 992px) {
+  .clients__slider {
+    margin: 0px 0px 50px 0px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .clients__slider {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.clients__img {
+  display: block;
+  max-width: 250px;
+  max-height: 130px;
 }
 
 .none {
