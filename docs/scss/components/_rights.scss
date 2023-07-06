@@ -1,0 +1,21 @@
+.rights {
+    padding: 50px 0px 40px;
+    @media (max-width: 992px) {
+        padding: 60px 0px 70px 0px;
+    }
+}
+.rights__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+.rights__copyright, .rights__author {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--black);
+}
