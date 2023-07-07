@@ -355,7 +355,7 @@ a {
 
 /* Background-image */
 .bg {
-  background: url("../../img/bg.png") center/cover no-repeat, var(--grey);
+  background: url("../img/bg.png") center/cover no-repeat, var(--grey);
 }
 
 /* Section */
@@ -496,11 +496,11 @@ a {
 }
 
 .controls__arrow--prev {
-  background-image: url("../../img/arrow-prev.svg");
+  background-image: url("../img/arrow-prev.svg");
 }
 
 .controls__arrow--next {
-  background-image: url("../../img/arrow-next.svg");
+  background-image: url("../img/arrow-next.svg");
 }
 
 .controls__arrow--blue {
@@ -612,7 +612,7 @@ a {
   line-height: 50px;
   color: var(--accent);
   padding: 0px 0px 0px 70px;
-  background-image: url("../../img/logo.svg");
+  background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: 40px 40px;
@@ -709,27 +709,27 @@ a {
 }
 
 .line__link--phone {
-  background-image: url("../../img/phone.svg");
+  background-image: url("../img/phone.svg");
 }
 
 .line__link--white-phone {
-  background-image: url("../../img/phone-white.svg");
+  background-image: url("../img/phone-white.svg");
 }
 
 .line__link--time {
-  background-image: url("../../img/time.svg");
+  background-image: url("../img/time.svg");
 }
 
 .line__link--envelope {
-  background-image: url("../../img/envelope.svg");
+  background-image: url("../img/envelope.svg");
 }
 
 .line__link--white-envelope {
-  background-image: url("../../img/envelope-white.svg");
+  background-image: url("../img/envelope-white.svg");
 }
 
 .line__link--map {
-  background-image: url("../../img/map.svg");
+  background-image: url("../img/map.svg");
 }
 
 .line__link--big {
@@ -890,7 +890,7 @@ a {
   position: relative;
   padding: 45px;
   min-height: 360px;
-  background: url("../../img/about-card.png") center/cover no-repeat, rgba(0, 0, 0, 0.65);
+  background: url("../img/about-card.png") center/cover no-repeat, rgba(0, 0, 0, 0.65);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

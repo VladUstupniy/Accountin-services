@@ -1,6 +1,6 @@
 /* Background-image */
 .bg {
-    background: url('../../img/bg.png') center/cover no-repeat, var(--grey);
+    background: url('../img/bg.png') center/cover no-repeat, var(--grey);
 }
 
 
@@ -113,10 +113,10 @@
     background-color: rgb(255, 255, 255, 0.4);
 }
 .controls__arrow--prev {
-    background-image: url('../../img/arrow-prev.svg');
+    background-image: url('../img/arrow-prev.svg');
 }
 .controls__arrow--next {
-    background-image: url('../../img/arrow-next.svg');
+    background-image: url('../img/arrow-next.svg');
 }
 .controls__arrow--blue {
     background-color: rgb(0, 95, 163, 0.2);
