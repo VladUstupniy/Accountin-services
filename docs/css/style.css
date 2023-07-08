@@ -1384,6 +1384,7 @@ a {
   border-right: none;
   border-left: none;
   border-bottom: 1px solid var(--white);
+  border-radius: 0px;
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 21px;
