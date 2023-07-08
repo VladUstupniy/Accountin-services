@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl.theme.default.min.css">
     <title>Бухгалтерские услуги</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
                 <div class="container">
                     <div class="nav__wrapper">
                         <a href="#" class="nav__logo">BuhOne</a>
-                        <div class="nav__line line">
+                        <div class="nav__line line" id="navLine">
                             <div class="line__top">
                                 <a href="#" class="line__link line__link--small line__link--phone">8 (111) 222-33-44</a>
                                 <a href="#" class="line__link line__link--small line__link--time">Пн-Пт 10:00-18:00</a>
@@ -24,13 +26,13 @@
                             </div>
                             <div class="line__bottom">
                                 <a href="#" class="line__link line__link--big">Главная</a>
-                                <a href="#" class="line__link line__link--big">услуги</a>
+                                <a href="#services" class="line__link line__link--big">услуги</a>
                                 <a href="#" class="line__link line__link--big">кейсы</a>
-                                <a href="#" class="line__link line__link--big">о компании</a>
-                                <a href="#" class="line__link line__link--big">контакты</a>
+                                <a href="#about" class="line__link line__link--big">о компании</a>
+                                <a href="#contacts" class="line__link line__link--big">контакты</a>
                             </div>
                         </div>
-                        <a href="#" class="burger">
+                        <a href="#" class="burger" id="burger">
                             <span class="burger__item"></span>
                             <span class="burger__item"></span>
                             <span class="burger__item"></span>
@@ -62,7 +64,7 @@
             </div>
         </header>
 
-        <section class="section services">
+        <section class="section services" id="services">
             <div class="container">
                 <h2 class="title services__title">Наши услуги</h2>
                 <h3 class="subtitle services__subtitle">Мы специализируемся</h3>
@@ -89,7 +91,7 @@
             </div>
         </section>
 
-        <section class="section about">
+        <section class="section about" id="about">
             <div class="container">
                 <div class="about__wrapper">
                     <div class="about__content">
@@ -129,7 +131,7 @@
             <div class="container">
                 <h2 class="client__title title">Наши клиенты</h2>
                 <h3 class="clients__subtitle subtitle">С нами работают</h3>
-                <div class="clients__slider slider">
+                <div class="clients__slider owl-carousel">
                     <div class="clients__item slider__item">
                         <img class="clients__img" src="./img/client-img.png" alt="Our client microsoft">
                     </div>
@@ -193,7 +195,7 @@
             </div>
         </section>
 
-        <footer class="footer bg">
+        <footer class="footer bg" id="contacts">
             <div class="container">
                 <div class="footer__info">
                     <div class="footer__content">
@@ -229,5 +231,10 @@
             </div>
         </div>
     </div>
+
+
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script src="libs/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

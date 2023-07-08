@@ -27,6 +27,7 @@
 .nav__line {
     display: block;
     position: static;
+    transition: all .3s ease-out;
     @media (max-width: 992px) {
         position: absolute;
         width: 100%;
