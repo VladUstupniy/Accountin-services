@@ -854,6 +854,11 @@ a {
     font-size: 40px;
   }
 }
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 34px;
+  }
+}
 
 .services {
   width: 100%;
