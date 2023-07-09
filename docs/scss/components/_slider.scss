@@ -1,0 +1,159 @@
+/* Стилизация слайдера (по стандарту элементы синие) */
+/* Обращение к слайдеру */
+.fullscreen__slider.owl-carousel {}
+
+/* обращение к дорожке со слайдами */
+.fullscreen__slider.owl-carousel .owl-stage-outer {
+    margin: 0px 0px 120px 0px;
+    @media (max-width: 992px) {
+        margin: 0px 0px 60px 0px;
+    }
+}
+
+/* стилизация пагинации (точек) */
+/* Обращение к обёртке точек */
+.fullscreen__slider.owl-carousel .owl-dots{
+    float: left;
+    display: flex;
+    height: 60px;
+}
+/* обращение к обёртке каждой точки */
+.fullscreen__slider.owl-carousel .owl-dots .owl-dot{
+    &:not(:last-child){
+        margin: 0px 40px 0px 0px;
+    }
+    align-self: end;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    opacity: 0.4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    /* обращение к активной точке */
+    &.active {
+        opacity: 1;
+    }
+    /* Ховер при наведении на точку */
+    &:hover{
+        opacity: 1;
+    }
+    /* Скрываем спан внутри */
+    span {
+        display: none;
+    }
+}
+
+/* Стилизация стрелок */
+/* обращение к обёртке стрелок */
+.fullscreen__slider.owl-carousel .owl-nav{
+    float: right;
+    margin: 0;
+}
+/* обращение к обёртке стрелки назад и вперёд */
+.fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
+    /* display: block; */
+    width: 60px;
+    height: 60px;
+    background: rgb(0, 95, 163, 0.2);
+    border-radius: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11px 17px;
+    transition: all .3s ease-out;
+    margin: 0;
+    @media (max-width: 768px) {
+        margin: 0px 30px;
+    }
+    &:hover {
+        background: var(--accent);
+    }
+    /* спан внутри затирается картинками через js */
+}
+
+
+
+
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+/* Стилизация слайдера */
+/* Обращение к слайдеру */
+.fullscreen__slider.owl-carousel {}
+
+/* обращение к дорожке со слайдами */
+.fullscreen__slider.owl-carousel .owl-stage-outer {
+    margin: 0px 0px 120px 0px;
+    @media (max-width: 992px) {
+        margin: 0px 0px 60px 0px;
+    }
+}
+
+/* стилизация пагинации (точек) */
+/* Обращение к обёртке точек */
+.fullscreen__slider.owl-carousel .owl-dots{
+    float: left;
+    display: flex;
+    height: 60px;
+}
+/* обращение к обёртке каждой точки */
+.fullscreen__slider.owl-carousel .owl-dots .owl-dot{
+    &:not(:last-child){
+        margin: 0px 40px 0px 0px;
+    }
+    align-self: end;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background: var(--white);
+    opacity: 0.4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    /* обращение к активной точке */
+    &.active {
+        opacity: 1;
+    }
+    /* Ховер при наведении на точку */
+    &:hover{
+        opacity: 1;
+    }
+    /* Скрываем спан внутри */
+    span {
+        display: none;
+    }
+}
+
+/* Стилизация стрелок */
+/* обращение к обёртке стрелок */
+.fullscreen__slider.owl-carousel .owl-nav{
+    float: right;
+    margin: 0;
+}
+/* обращение к обёртке стрелки назад и вперёд */
+.fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
+    /* display: block; */
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11px 17px;
+    transition: all .3s ease-out;
+    margin: 0;
+    @media (max-width: 768px) {
+        margin: 0px 30px;
+    }
+    &:hover {
+        background-color: rgb(255, 255, 255, 0.4);
+    }
+    /* спан внутри затирается картинками через js */
+}

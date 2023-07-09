@@ -1,4 +1,4 @@
-const clientsSLiderItem = document.querySelectorAll('.clients__item');
+/* const clientsSLiderItem = document.querySelectorAll('.clients__item');
 window.addEventListener('resize', () => {
     if (this.window.innerWidth <= 1200) {
         clientsSLiderItem[3].style.display = "none";
@@ -17,7 +17,7 @@ window.addEventListener('resize', () => {
     }else{
         clientsSLiderItem[1].style.display = "block";
     }
-});
+}); */
 
 
 
@@ -42,10 +42,4 @@ burger.addEventListener('click', () => {
     }else{
         enableScroll();
     };
-});
-
-
-
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
 });
