@@ -1,24 +1,21 @@
-/* Стилизация слайдера (по стандарту элементы синие) */
-/* Обращение к слайдеру */
-.fullscreen__slider.owl-carousel {}
-
+/* -------------------------------------------------- Общие стили слайдеров */
 /* обращение к дорожке со слайдами */
-.fullscreen__slider.owl-carousel .owl-stage-outer {
-    margin: 0px 0px 120px 0px;
-    @media (max-width: 992px) {
-        margin: 0px 0px 60px 0px;
-    }
+.owl-carousel .owl-stage-outer {
+    margin: 0px 0px 50px 0px;
 }
-
 /* стилизация пагинации (точек) */
 /* Обращение к обёртке точек */
-.fullscreen__slider.owl-carousel .owl-dots{
+.owl-carousel .owl-dots{
     float: left;
     display: flex;
     height: 60px;
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 /* обращение к обёртке каждой точки */
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot{
+.owl-carousel .owl-dots .owl-dot{
+    background: var(--accent);
     &:not(:last-child){
         margin: 0px 40px 0px 0px;
     }
@@ -26,7 +23,6 @@
     display: flex;
     width: 10px;
     height: 10px;
-    background: var(--accent);
     opacity: 0.4;
     border-radius: 50%;
     cursor: pointer;
@@ -44,116 +40,72 @@
         display: none;
     }
 }
-
 /* Стилизация стрелок */
 /* обращение к обёртке стрелок */
-.fullscreen__slider.owl-carousel .owl-nav{
+.owl-carousel .owl-nav{
     float: right;
-    margin: 0;
+    @media (max-width: 992px) {
+        width: 100%;
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+}
+/* обращение к обёртке стрелки назад и вперёд */
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    @media (max-width: 992px) {
+        width: 120px;
+        margin: 0 30px;
+    }
+    /* спан внутри затирается картинками через js */
+}
+/* ----------------------------------------------- // Общие стили слайдеров */
+
+/* -------------------------------------------------- Стили слайдера Header */
+/* обращение к дорожке со слайдами */
+.fullscreen__slider.owl-carousel .owl-stage-outer {
+    margin: 0px 0px 70px 0px;
+}
+/* стилизация пагинации (точек) */
+/* обращение к обёртке каждой точки */
+.fullscreen__slider.owl-carousel .owl-dots .owl-dot{
+    background: var(--white);
 }
 /* обращение к обёртке стрелки назад и вперёд */
 .fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-    /* display: block; */
-    width: 60px;
-    height: 60px;
-    background: rgb(0, 95, 163, 0.2);
-    border-radius: 0;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 11px 17px;
-    transition: all .3s ease-out;
-    margin: 0;
-    @media (max-width: 768px) {
-        margin: 0px 30px;
+    background: rgb(255, 255, 255, 0.2);
+    &:hover {
+        background: rgb(255, 255, 255, 0.4);
     }
+}
+/* ----------------------------------------------- // Стили слайдера Header */
+
+/* -------------------------------------------------- Стили слайдера Clients */
+.clients__slider.owl-carousel .owl-nav .owl-prev, .clients__slider.owl-carousel .owl-nav .owl-next {
+    background: rgb(0, 95, 163, 0.2);
     &:hover {
         background: var(--accent);
     }
-    /* спан внутри затирается картинками через js */
 }
+/* ----------------------------------------------- // Стили слайдера Clients */
 
-
-
-
-
-/* -------------------------------------------------------------- */
-
-
-
-
-
-/* Стилизация слайдера */
-/* Обращение к слайдеру */
-.fullscreen__slider.owl-carousel {}
-
-/* обращение к дорожке со слайдами */
-.fullscreen__slider.owl-carousel .owl-stage-outer {
-    margin: 0px 0px 120px 0px;
-    @media (max-width: 992px) {
-        margin: 0px 0px 60px 0px;
-    }
-}
-
-/* стилизация пагинации (точек) */
-/* Обращение к обёртке точек */
-.fullscreen__slider.owl-carousel .owl-dots{
-    float: left;
-    display: flex;
-    height: 60px;
-}
-/* обращение к обёртке каждой точки */
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot{
-    &:not(:last-child){
-        margin: 0px 40px 0px 0px;
-    }
-    align-self: end;
-    display: flex;
-    width: 10px;
-    height: 10px;
-    background: var(--white);
-    opacity: 0.4;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all .3s ease-out;
-    /* обращение к активной точке */
-    &.active {
-        opacity: 1;
-    }
-    /* Ховер при наведении на точку */
-    &:hover{
-        opacity: 1;
-    }
-    /* Скрываем спан внутри */
-    span {
-        display: none;
-    }
-}
-
-/* Стилизация стрелок */
-/* обращение к обёртке стрелок */
-.fullscreen__slider.owl-carousel .owl-nav{
-    float: right;
-    margin: 0;
-}
-/* обращение к обёртке стрелки назад и вперёд */
-.fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-    /* display: block; */
-    width: 60px;
-    height: 60px;
-    background-color: rgb(255, 255, 255, 0.2);
-    border-radius: 0;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 11px 17px;
-    transition: all .3s ease-out;
-    margin: 0;
-    @media (max-width: 768px) {
-        margin: 0px 30px;
-    }
+/* -------------------------------------------------- Стили слайдера Reviews */
+.reviews__slider.owl-carousel .owl-nav .owl-prev, .reviews__slider.owl-carousel .owl-nav .owl-next {
+    background: rgb(0, 95, 163, 0.2);
     &:hover {
-        background-color: rgb(255, 255, 255, 0.4);
+        background: var(--accent);
     }
-    /* спан внутри затирается картинками через js */
+}
+/* ----------------------------------------------- // Стили слайдера Reviews */
+
+/* Для очистки потоков обтекания блоков пагинации и навигации слайдера */
+.fullscreen__slider::after, .clients__slider::after, .reviews__slider::after {
+    content: '';
+    clear: both;
+    display: table;
 }

@@ -1,8 +1,5 @@
 .header {
     position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 .header__fullscreen {
     flex: 1 1 auto;
@@ -28,12 +25,6 @@
             display: inline;
         }
     }
-}
-/* Для очистки потоков обтекания блоков пагинации и навигации слайдера */
-.fullscreen__slider::after {
-    content: '';
-    clear: both;
-    display: table;
 }
 .fullscreen__button {
     width: 23%;

@@ -654,14 +654,6 @@ a {
 
 .header {
   position: relative;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .header__fullscreen {
@@ -695,13 +687,6 @@ a {
   .fullscreen__title span {
     display: inline;
   }
-}
-
-/* Для очистки потоков обтекания блоков пагинации и навигации слайдера */
-.fullscreen__slider::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .fullscreen__button {
@@ -747,12 +732,12 @@ a {
 }
 @media (max-width: 992px) {
   .subtitle {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media (max-width: 768px) {
   .subtitle {
-    font-size: 34px;
+    font-size: 30px;
   }
 }
 
@@ -964,26 +949,8 @@ a {
   }
 }
 
-.clients__slider {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin: 0px 0px 100px 0px;
-}
-@media (max-width: 992px) {
-  .clients__slider {
-    margin: 0px 0px 50px 0px;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .clients__slider {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-  }
+.clients__item {
+  margin: 0px 0px 0px -6px;
 }
 
 .clients__img {
@@ -992,30 +959,30 @@ a {
   max-height: 130px;
 }
 
-/* Стилизация слайдера (по стандарту элементы синие) */
-/* Обращение к слайдеру */
+/* -------------------------------------------------- Общие стили слайдеров */
 /* обращение к дорожке со слайдами */
-.fullscreen__slider.owl-carousel .owl-stage-outer {
-  margin: 0px 0px 120px 0px;
-}
-@media (max-width: 992px) {
-  .fullscreen__slider.owl-carousel .owl-stage-outer {
-    margin: 0px 0px 60px 0px;
-  }
+.owl-carousel .owl-stage-outer {
+  margin: 0px 0px 50px 0px;
 }
 
 /* стилизация пагинации (точек) */
 /* Обращение к обёртке точек */
-.fullscreen__slider.owl-carousel .owl-dots {
+.owl-carousel .owl-dots {
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 60px;
 }
+@media (max-width: 992px) {
+  .owl-carousel .owl-dots {
+    display: none;
+  }
+}
 
 /* обращение к обёртке каждой точки */
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot {
+.owl-carousel .owl-dots .owl-dot {
+  background: var(--accent);
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -1024,7 +991,6 @@ a {
   display: flex;
   width: 10px;
   height: 10px;
-  background: var(--accent);
   opacity: 0.4;
   border-radius: 50%;
   cursor: pointer;
@@ -1034,137 +1000,99 @@ a {
   /* Ховер при наведении на точку */
   /* Скрываем спан внутри */
 }
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot:not(:last-child) {
+.owl-carousel .owl-dots .owl-dot:not(:last-child) {
   margin: 0px 40px 0px 0px;
 }
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot.active {
+.owl-carousel .owl-dots .owl-dot.active {
   opacity: 1;
 }
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot:hover {
+.owl-carousel .owl-dots .owl-dot:hover {
   opacity: 1;
 }
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot span {
+.owl-carousel .owl-dots .owl-dot span {
   display: none;
 }
 
 /* Стилизация стрелок */
 /* обращение к обёртке стрелок */
-.fullscreen__slider.owl-carousel .owl-nav {
+.owl-carousel .owl-nav {
   float: right;
-  margin: 0;
+}
+@media (max-width: 992px) {
+  .owl-carousel .owl-nav {
+    width: 100%;
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /* обращение к обёртке стрелки назад и вперёд */
-.fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-  /* display: block; */
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
   width: 60px;
   height: 60px;
-  background: rgba(0, 95, 163, 0.2);
   border-radius: 0;
   cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 11px 17px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  margin: 0;
   /* спан внутри затирается картинками через js */
 }
-@media (max-width: 768px) {
-  .fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-    margin: 0px 30px;
+@media (max-width: 992px) {
+  .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    width: 120px;
+    margin: 0 30px;
   }
-}
-.fullscreen__slider.owl-carousel .owl-nav .owl-prev:hover, .fullscreen__slider.owl-carousel .owl-nav .owl-next:hover {
-  background: var(--accent);
 }
 
-/* -------------------------------------------------------------- */
-/* Стилизация слайдера */
-/* Обращение к слайдеру */
+/* ----------------------------------------------- // Общие стили слайдеров */
+/* -------------------------------------------------- Стили слайдера Header */
 /* обращение к дорожке со слайдами */
 .fullscreen__slider.owl-carousel .owl-stage-outer {
-  margin: 0px 0px 120px 0px;
-}
-@media (max-width: 992px) {
-  .fullscreen__slider.owl-carousel .owl-stage-outer {
-    margin: 0px 0px 60px 0px;
-  }
+  margin: 0px 0px 70px 0px;
 }
 
 /* стилизация пагинации (точек) */
-/* Обращение к обёртке точек */
-.fullscreen__slider.owl-carousel .owl-dots {
-  float: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 60px;
-}
-
 /* обращение к обёртке каждой точки */
 .fullscreen__slider.owl-carousel .owl-dots .owl-dot {
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 10px;
-  height: 10px;
   background: var(--white);
-  opacity: 0.4;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  /* обращение к активной точке */
-  /* Ховер при наведении на точку */
-  /* Скрываем спан внутри */
-}
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot:not(:last-child) {
-  margin: 0px 40px 0px 0px;
-}
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot.active {
-  opacity: 1;
-}
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot:hover {
-  opacity: 1;
-}
-.fullscreen__slider.owl-carousel .owl-dots .owl-dot span {
-  display: none;
-}
-
-/* Стилизация стрелок */
-/* обращение к обёртке стрелок */
-.fullscreen__slider.owl-carousel .owl-nav {
-  float: right;
-  margin: 0;
 }
 
 /* обращение к обёртке стрелки назад и вперёд */
 .fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-  /* display: block; */
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 11px 17px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  margin: 0;
-  /* спан внутри затирается картинками через js */
-}
-@media (max-width: 768px) {
-  .fullscreen__slider.owl-carousel .owl-nav .owl-prev, .fullscreen__slider.owl-carousel .owl-nav .owl-next {
-    margin: 0px 30px;
-  }
+  background: rgba(255, 255, 255, 0.2);
 }
 .fullscreen__slider.owl-carousel .owl-nav .owl-prev:hover, .fullscreen__slider.owl-carousel .owl-nav .owl-next:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ----------------------------------------------- // Стили слайдера Header */
+/* -------------------------------------------------- Стили слайдера Clients */
+.clients__slider.owl-carousel .owl-nav .owl-prev, .clients__slider.owl-carousel .owl-nav .owl-next {
+  background: rgba(0, 95, 163, 0.2);
+}
+.clients__slider.owl-carousel .owl-nav .owl-prev:hover, .clients__slider.owl-carousel .owl-nav .owl-next:hover {
+  background: var(--accent);
+}
+
+/* ----------------------------------------------- // Стили слайдера Clients */
+/* -------------------------------------------------- Стили слайдера Reviews */
+.reviews__slider.owl-carousel .owl-nav .owl-prev, .reviews__slider.owl-carousel .owl-nav .owl-next {
+  background: rgba(0, 95, 163, 0.2);
+}
+.reviews__slider.owl-carousel .owl-nav .owl-prev:hover, .reviews__slider.owl-carousel .owl-nav .owl-next:hover {
+  background: var(--accent);
+}
+
+/* ----------------------------------------------- // Стили слайдера Reviews */
+/* Для очистки потоков обтекания блоков пагинации и навигации слайдера */
+.fullscreen__slider::after, .clients__slider::after, .reviews__slider::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .reviews__subtitle {
